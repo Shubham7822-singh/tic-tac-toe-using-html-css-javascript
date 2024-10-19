@@ -1,0 +1,106 @@
+/* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: 'Itim', cursive; /* Set font family */
+}
+
+.background {
+    background-color: #12181B; /* Dark background color */
+    height: 100vh; /* Full viewport height */
+    padding-top: 1px;     
+}
+
+.title {
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    font-size: 40px; /* Title font size */
+    margin-top: 10%; /* Margin from the top */
+}
+
+.display {
+    color: white; /* White text color for the display */
+    font-size: 25px; /* Font size for the player display */
+    text-align: center; /* Center align text */
+    margin-top: 1em; /* Margin from the top */
+    margin-bottom: 1em; /* Margin from the bottom */
+}
+
+.hide {
+    display: none; /* Hide element */
+}
+
+.container {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+}
+
+.tile {
+    border: 1px solid white; /* White border */
+    min-width: 100px; /* Minimum width */
+    min-height: 100px; /* Minimum height */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-size: 50px; /* Font size for the tiles */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.tile:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+.playerX {
+    color: #09C372; /* Color for player X */
+}
+
+.playerO {
+    color: #498AFB; /* Color for player O */
+}
+
+.controls {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the button */
+    margin-top: 1em; /* Margin from the top */
+}
+
+#reset {
+    background-color: #FF3860; /* Reset button background color */
+    color: white; /* Reset button text color */
+    padding: 8px 16px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* No border */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+#reset:hover {
+    background-color: #FF1C3B; /* Darker color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .title {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+    .display {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+    .tile {
+        font-size: 40px; /* Smaller tile font size for mobile */
+        min-width: 80px; /* Adjust minimum width for mobile */
+        min-height: 80px; /* Adjust minimum height for mobile */
+    }
+    #reset {
+        font-size: 18px; /* Smaller font size for reset button */
+    }
+}
+
+
